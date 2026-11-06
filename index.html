@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101020">
+    <title>Puzzle Master</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="game-container">
+
+        <header class="header">
+            <div class="logo">PUZZLE<span>MASTER</span></div>
+            <p>Challenge your brain. Beat your best score.</p>
+        </header>
+
+        <section class="stats">
+            <div class="stat-card">
+                <span>⏱️ TIME</span>
+                <strong id="timer">00:00</strong>
+            </div>
+            <div class="stat-card">
+                <span>👣 MOVES</span>
+                <strong id="moves">0</strong>
+            </div>
+            <div class="stat-card">
+                <span>🏆 BEST</span>
+                <strong id="best">—</strong>
+            </div>
+        </section>
+
+        <section class="settings">
+            <div class="setting-group">
+                <label for="difficulty">Difficulty</label>
+                <select id="difficulty">
+                    <option value="3">Easy - 3×3</option>
+                    <option value="4">Medium - 4×4</option>
+                    <option value="5">Hard - 5×5</option>
+                </select>
+            </div>
+
+            <button id="sound-btn" class="sound-btn">🔊 Sound ON</button>
+        </section>
+
+        <section class="board-area">
+            <div id="board" class="puzzle-board"></div>
+        </section>
+
+        <div class="buttons">
+            <button id="shuffle-btn" class="primary-btn">🔀 New Game</button>
+            <button id="restart-btn" class="secondary-btn">↻ Restart</button>
+        </div>
+
+        <div id="message" class="message"></div>
+
+        <footer>
+            <p>PUZZLE MASTER © 2026</p>
+            <span>Made to challenge your mind ✨</span>
+        </footer>
+
+    </main>
+
+    <div id="win-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="trophy">🏆</div>
+            <h2>YOU DID IT!</h2>
+            <p>Congratulations! Puzzle completed.</p>
+            <div id="win-stats"></div>
+            <button id="play-again">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
